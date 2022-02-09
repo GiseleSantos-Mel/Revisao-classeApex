@@ -1,14 +1,15 @@
 public void funcaoQualquer(){
  // RETORNA ABSOLUTAMENTE NADA
  // VOID = NADA
+
+   // SALVAR O REGISTRO
+   // DANCAR
 }
 
 public String funcaoQualquer2(){
    // 
    return 'STRING';
 }
-
-
 
 // A funcaoQualquer4 vai te retornar 1 Registro
 // do Objeto Conta
@@ -20,7 +21,7 @@ public Account funcaoQualquer4(){
 public void funcaoChamaGeral(){
    List<Account> lstAcc = new List<Account>();
    // QUEIRA PREENCHER A MINHA lstAcc 
-   // com o resultado de uuma Query
+   // com o resultado de uma Query
    lstAcc = funcaoQualquer3();
    funcaoDeDuplicacao(lstAcc);
 }
@@ -32,6 +33,28 @@ public void funcaoDeDuplicacao(List<Account> listaDeContas){
    // X Y Z
 }
 
+// Esse metodo que retorna uma Lista/ARRAY/COLECAO de Contas
+// chama FuncaoQualquer3
+// NAO TEM NENHUM PARAMETRO 
 public List<Account> funcaoQualquer3(){
+   // RETORNANDO UMA QUERY EM QUE ELE SOH 
+   // SELECIONA O ID DE TODAS AS CONTAS NA ORGANIZACAO 
    return [SELECT Id FROM Account];
 }
+
+// funcao vai me retornar um unico Lead
+// chama funcaoQualquer3
+// Ela possui 2 Parametros de Entrada
+// 1. Recebe uma lista de Contas
+// 2. Variavel do tipo Booleana ( true / false )
+public Lead funcaoQualquer3(List<Account> lstAcc, Boolean ehVerdade){
+   // Retorna uma query em que somente foi selecionado
+   // O Campo Id do Objeto Lead 
+   return [SELECT Id FROM Lead LIMIT 1];
+}
+
+
+
+
+
+
