@@ -1,0 +1,37 @@
+public void funcaoQualquer(){
+ // RETORNA ABSOLUTAMENTE NADA
+ // VOID = NADA
+}
+
+public String funcaoQualquer2(){
+   // 
+   return 'STRING';
+}
+
+
+
+// A funcaoQualquer4 vai te retornar 1 Registro
+// do Objeto Conta
+public Account funcaoQualquer4(){
+   // NAO VAI FUNCIONAR
+   return [SELECT Id FROM Account LIMIT 1];   
+}
+
+public void funcaoChamaGeral(){
+   List<Account> lstAcc = new List<Account>();
+   // QUEIRA PREENCHER A MINHA lstAcc 
+   // com o resultado de uuma Query
+   lstAcc = funcaoQualquer3();
+   funcaoDeDuplicacao(lstAcc);
+}
+
+// Nao vai retornar nada
+// Parametro de Entrada : Lista de Contas
+public void funcaoDeDuplicacao(List<Account> listaDeContas){
+   // FAZ QUALQUER COISA COM A LISTA
+   // X Y Z
+}
+
+public List<Account> funcaoQualquer3(){
+   return [SELECT Id FROM Account];
+}
